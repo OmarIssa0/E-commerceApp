@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.5
+  fancy_shimmer_image: ^2.0.3
   flutter:
     sdk: flutter
   flutter_iconly: ^1.0.2
@@ -66,6 +67,5 @@ flutter:
     - family: DMSans
       fonts:
         - asset: assets/fonts/DMSans-VariableFont_opsz,wght.ttf
-  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

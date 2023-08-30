@@ -5,7 +5,7 @@ class TitleTextAppCustom extends StatelessWidget {
     super.key,
     required this.label,
     this.color = const Color(0xff0C1A30),
-    this.fontSize = 18,
+    required this.fontSize,
     this.maxLine = 1,
     this.fontWeight = FontWeight.normal,
   });

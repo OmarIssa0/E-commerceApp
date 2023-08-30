@@ -20,6 +20,8 @@ class BoxImageAndOther extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 5.r, vertical: 7.5.r),
       child: Material(
+        shadowColor: Colors.white70,
+        type: MaterialType.card,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.r),
         ),

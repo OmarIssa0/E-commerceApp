@@ -18,35 +18,12 @@ class SearchBarHomeView extends StatelessWidget {
           color: ColorApp.kColorOfGrey,
           borderRadius: BorderRadius.circular(10.r),
         ),
-        child: TextField(
+        child: const TextField(
           cursorColor: ColorApp.kColorDarkGrey,
           decoration: InputDecoration(
             suffixIcon:
-                const Icon(IconlyLight.search, color: ColorApp.kColorNavyBlack),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.r),
-              borderSide: const BorderSide(color: ColorApp.kColorOfGrey),
-            ),
-            // label: TitleTextAppCustom(
-            //   label: 'Search Product Name',
-            //   fontSize: 14.sp,
-            //   fontWeight: FontWeight.w500,
-            //   color: ColorApp.kColorHalfGrey,
-            // ),
+                Icon(IconlyLight.search, color: ColorApp.kColorNavyBlack),
             hintText: 'Search Product Name',
-            hintStyle: TextStyle(
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w500,
-              color: ColorApp.kColorHalfGrey,
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.r),
-              borderSide: const BorderSide(color: ColorApp.kColorOfGrey),
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.r),
-              // borderSide: const BorderSide(color: ColorApp.kColorOfGrey),
-            ),
           ),
         ),
       ),

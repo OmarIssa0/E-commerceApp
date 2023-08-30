@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_shope/core/router_app.dart';
+import 'package:smart_shope/core/theme_data.dart';
 
 void main() {
   runApp(
@@ -21,10 +22,12 @@ class MyApp extends StatelessWidget {
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           routerConfig: AppRouter.router,
-          theme: ThemeData(
-            fontFamily: 'DMSans',
-            useMaterial3: true,
-          ),
+          // theme: ThemeData(
+          //   scaffoldBackgroundColor: Colors.white,
+          //   fontFamily: 'DMSans',
+          //   useMaterial3: true,
+          // ),
+          theme: Styles.themeData(context: context),
         );
       },
     );

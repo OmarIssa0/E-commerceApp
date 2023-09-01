@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_shope/core/color_app.dart';
+import 'package:smart_shope/core/utils/color_app.dart';
 
 class Styles {
   static ThemeData themeData({

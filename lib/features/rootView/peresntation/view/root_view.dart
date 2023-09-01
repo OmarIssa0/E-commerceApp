@@ -45,6 +45,7 @@ class _RootViewsState extends State<RootViews> {
           children: view,
         ),
         bottomNavigationBar: NavigationBar(
+          
           backgroundColor: Colors.white,
           indicatorColor: Colors.white,
           selectedIndex: currentScreen,
@@ -58,6 +59,7 @@ class _RootViewsState extends State<RootViews> {
           },
           destinations: const [
             NavigationDestination(
+              
               // icon: Icon(Icons.home),
               selectedIcon: Icon(IconlyBold.home),
               icon: Icon(IconlyLight.home),

@@ -5,16 +5,15 @@ import 'package:smart_shope/core/utils/animation_nav.dart';
 import 'package:smart_shope/core/utils/color_app.dart';
 import 'package:smart_shope/core/utils/title_text.dart';
 
-class LoginViewBody extends StatefulWidget {
-  const LoginViewBody({super.key});
+class RegisterBodyView extends StatefulWidget {
+  const RegisterBodyView({super.key});
 
   @override
-  State<LoginViewBody> createState() => _LoginViewBodyState();
+  State<RegisterBodyView> createState() => _RegisterBodyViewState();
 }
 
-class _LoginViewBodyState extends State<LoginViewBody> {
+class _RegisterBodyViewState extends State<RegisterBodyView> {
   bool isShow = true;
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -36,7 +35,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               height: 72.h,
             ),
             TitleTextAppCustom(
-              label: 'Welcome back to \nMage Mall',
+              label: 'Register Account ',
               fontSize: 25.sp,
               fontWeight: FontWeight.w700,
               maxLine: 2,
@@ -45,7 +44,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               height: 20.h,
             ),
             TitleTextAppCustom(
-              label: 'Silahkan masukan data untuk login',
+              label: 'Masukan Email/ No. Hp untuk mendeftar',
               fontSize: 14.sp,
               fontWeight: FontWeight.w400,
               color: ColorApp.kColorTextAuthGrey,
@@ -53,9 +52,28 @@ class _LoginViewBodyState extends State<LoginViewBody> {
             SizedBox(
               height: 50.h,
             ),
-            TitleTextAppCustom(
-              label: 'Email/Phone',
-              fontSize: 14.sp,
+            // TitleTextAppCustom(
+            //   label: 'Email/Phone',
+            //   fontSize: 14.sp,
+            // ),
+            SizedBox(
+              height: 20.h,
+            ),
+            Container(
+              height: 50.h,
+              width: 325.w,
+              decoration: BoxDecoration(
+                color: ColorApp.kColorOfGrey,
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+              child: const TextField(
+                keyboardType: TextInputType.emailAddress,
+                textInputAction: TextInputAction.next,
+                cursorColor: Colors.black,
+                decoration: InputDecoration(
+                  hintText: 'Full Name',
+                ),
+              ),
             ),
             SizedBox(
               height: 20.h,
@@ -75,13 +93,6 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   hintText: 'Email Address',
                 ),
               ),
-            ),
-            SizedBox(
-              height: 30.h,
-            ),
-            TitleTextAppCustom(
-              label: 'Password',
-              fontSize: 14.sp,
             ),
             SizedBox(
               height: 20.h,
@@ -114,13 +125,67 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
             ),
             SizedBox(
-              height: 70.h,
+              height: 20.h,
             ),
+            Container(
+              height: 50.h,
+              width: 325.w,
+              decoration: BoxDecoration(
+                color: ColorApp.kColorOfGrey,
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+              child: TextField(
+                keyboardType: TextInputType.visiblePassword,
+                textInputAction: TextInputAction.done,
+                obscureText: isShow,
+                cursorColor: Colors.black,
+                decoration: InputDecoration(
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        isShow = !isShow;
+                      });
+                    },
+                    icon: isShow
+                        ? const Icon(IconlyLight.show)
+                        : const Icon(IconlyLight.hide),
+                  ),
+                  hintText: 'Enter Password',
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 35.h,
+            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     TextButton(
+            //       onPressed: () {},
+            //       style: TextButton.styleFrom(
+            //           foregroundColor: ColorApp.kColorTextAuthGrey),
+            //       child: TitleTextAppCustom(
+            //         label: 'Forgot Password',
+            //         fontSize: 14.sp,
+            //       ),
+            //     ),
+            //     TextButton(
+            //       onPressed: () {},
+            //       style: TextButton.styleFrom(
+            //           foregroundColor: ColorApp.kColorTextAuthGrey),
+            //       child: TitleTextAppCustom(
+            //         label: 'Sign Up',
+            //         fontSize: 14.sp,
+            //         color: ColorApp.kColorButton,
+            //       ),
+            //     ),
+            //   ],
+            // ),
+            // SizedBox(
+            //   height: 35.h,
+            // ),
             GestureDetector(
-              onTap: () {
-                Navigator.of(context)
-                    .pushReplacement(AnimationNav.createRouteHomeView());
-              },
+              onTap: () {},
               child: Container(
                 height: 50.h,
                 width: double.infinity,
@@ -132,7 +197,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 ),
                 child: Center(
                   child: TitleTextAppCustom(
-                    label: 'Sign In',
+                    label: 'Sign Up',
                     fontSize: 14.sp,
                     color: Colors.white,
                   ),
@@ -140,37 +205,26 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
             ),
             SizedBox(
-              height: 125.h,
+              height: 50.h,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextButton(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                      foregroundColor: ColorApp.kColorTextAuthGrey),
-                  child: TitleTextAppCustom(
-                    label: 'Forgot Password',
-                    fontSize: 14.sp,
-                  ),
-                ),
+                TitleTextAppCustom(label: 'Have an Account?', fontSize: 14.sp),
                 TextButton(
                   onPressed: () {
                     Navigator.of(context)
-                        .pushReplacement(AnimationNav.createRouteSignUp());
+                        .pushReplacement(AnimationNav.createRouteSigIn());
                   },
                   style: TextButton.styleFrom(
                       foregroundColor: ColorApp.kColorTextAuthGrey),
                   child: TitleTextAppCustom(
-                    label: 'Sign Up',
+                    label: 'Sign In',
                     fontSize: 14.sp,
                     color: ColorApp.kColorButton,
                   ),
                 ),
               ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).viewInsets.bottom,
             ),
           ],
         ),

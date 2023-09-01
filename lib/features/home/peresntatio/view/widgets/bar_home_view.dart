@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_shope/core/color_app.dart';
-import 'package:smart_shope/core/title_text.dart';
+import 'package:smart_shope/core/utils/color_app.dart';
+import 'package:smart_shope/core/utils/title_text.dart';
 
 class BarHomeView extends StatelessWidget {
   const BarHomeView({

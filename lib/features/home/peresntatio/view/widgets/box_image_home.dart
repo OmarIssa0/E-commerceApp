@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_shope/core/title_text.dart';
+import 'package:smart_shope/core/utils/title_text.dart';
 
 class BoxImageAndOther extends StatelessWidget {
   const BoxImageAndOther({

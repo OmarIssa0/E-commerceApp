@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_shope/core/title_text.dart';
+import 'package:smart_shope/core/utils/title_text.dart';
 import 'package:smart_shope/features/home/peresntatio/view/widgets/box_image_home.dart';
 
+import '../../../../../core/utils/color_app.dart';
 import '../../viewModel/featured/featured.dart';
 
 class FeaturedProduct extends StatelessWidget {
@@ -25,6 +26,8 @@ class FeaturedProduct extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
               TextButton(
+                style: TextButton.styleFrom(
+                    foregroundColor: ColorApp.kColorTextAuthGrey),
                 onPressed: () {},
                 child: TitleTextAppCustom(
                   label: 'See All',

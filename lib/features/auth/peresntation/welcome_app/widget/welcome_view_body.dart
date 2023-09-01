@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:smart_shope/core/color_app.dart';
-import 'package:smart_shope/core/router_app.dart';
-import 'package:smart_shope/core/title_text.dart';
+import 'package:lottie/lottie.dart';
+import 'package:smart_shope/core/utils/animation_nav.dart';
+import 'package:smart_shope/core/utils/color_app.dart';
+import 'package:smart_shope/core/utils/title_text.dart';
 
 class WelcomeViewBody extends StatelessWidget {
   const WelcomeViewBody({super.key});
@@ -16,15 +16,15 @@ class WelcomeViewBody extends StatelessWidget {
         Stack(
           children: [
             Container(
-              height: 150.h,
+              height: 290.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.r),
               ),
-              // child: Lottie.asset(
-              //   "assets/image/animation_llv8ffkg.json",
-              //   // width: 225,
-              //   height: 220.h,
-              // ),
+              child: Lottie.asset(
+                "assets/image/animation_llznp944.json",
+                // width: 225,
+                height: 220.h,
+              ),
             ),
           ],
         ),
@@ -32,7 +32,8 @@ class WelcomeViewBody extends StatelessWidget {
           child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 0, 0, 0),
+              // color: const Color.fromARGB(255, 0, 0, 0),
+              color: Colors.grey.shade900,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(35.r),
                 topRight: Radius.circular(35.r),
@@ -56,17 +57,21 @@ class WelcomeViewBody extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(
-                        height: 150.h,
+                        height: 60.h,
                       ),
                       GestureDetector(
                         onTap: () {
-                          GoRouter.of(context).push(AppRouter.kLoginView);
+                          // GoRouter.of(context).push(AppRouter.kLoginView);
+                          // GoRouter.of(context).push(createRoute() as String);
+                          Navigator.of(context)
+                              .push(AnimationNav.createRouteSigIn());
                         },
                         child: Container(
                           height: 50.h,
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: ColorApp.kColorButton,
+                            // color: ColorApp.kColorTextAuathGrey,
                             borderRadius: BorderRadius.circular(
                               10.r,
                             ),
@@ -81,16 +86,31 @@ class WelcomeViewBody extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
+                        height: 45.h,
+                      ),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: TitleTextAppCustom(
+                          label: "New Create Account",
+                          fontSize: 14.sp,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(
                         height: 15.h,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(AnimationNav.createRouteSignUp());
+                        },
                         child: Container(
                           height: 50.h,
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: ColorApp.kColorNavyBlack,
-                            // color: ColorApp.kColorOfGrey,
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            // color: ColorApp.kColorHalfGrey,
                             borderRadius: BorderRadius.circular(
                               10.r,
                             ),
@@ -99,7 +119,7 @@ class WelcomeViewBody extends StatelessWidget {
                             child: TitleTextAppCustom(
                               label: 'Sign Up',
                               fontSize: 14.sp,
-                              color: Colors.white,
+                              color: const Color.fromARGB(255, 0, 0, 0),
                             ),
                           ),
                         ),
@@ -108,7 +128,7 @@ class WelcomeViewBody extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 70.h,
+                  height: 50.h,
                 ),
                 Row(
                   children: [

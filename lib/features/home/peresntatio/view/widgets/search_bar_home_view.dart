@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/color_app.dart';
+import '../../../../../core/utils/color_app.dart';
 
 class SearchBarHomeView extends StatelessWidget {
   const SearchBarHomeView({super.key});

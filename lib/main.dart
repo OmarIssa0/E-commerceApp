@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_shope/core/router_app.dart';
-import 'package:smart_shope/core/theme_data.dart';
+import 'package:smart_shope/core/utils/router_app.dart';
+import 'package:smart_shope/core/utils/theme_data.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    // DeviceOrientation.portraitDown,
+  ]);
   runApp(
     const MyApp(),
   );

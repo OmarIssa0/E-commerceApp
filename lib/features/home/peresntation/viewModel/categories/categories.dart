@@ -1,4 +1,4 @@
-import 'package:smart_shope/features/home/peresntatio/viewModel/categories/categories_model.dart';
+import 'package:smart_shope/features/home/peresntation/viewModel/categories/categories_model.dart';
 
 class CategoriesListName {
   static List<CategoriesModel> categories = [

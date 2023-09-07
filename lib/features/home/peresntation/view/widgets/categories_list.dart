@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_shope/core/utils/title_text.dart';
-import 'package:smart_shope/features/home/peresntatio/view/widgets/categories_rounded_widget.dart';
-import 'package:smart_shope/features/home/peresntatio/viewModel/categories/categories.dart';
+import 'package:smart_shope/features/home/peresntation/view/widgets/categories_rounded_widget.dart';
+import 'package:smart_shope/features/home/peresntation/viewModel/categories/categories.dart';
 
 import '../../../../../core/utils/color_app.dart';
 

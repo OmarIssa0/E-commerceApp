@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:smart_shope/features/home/peresntatio/view/home_view.dart';
+import 'package:smart_shope/features/home/peresntation/view/home_view.dart';
 import 'package:smart_shope/features/order/peresntation/view/order_view.dart';
 import 'package:smart_shope/features/profile/peresntation/view/profile_view.dart';
 

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:smart_shope/core/utils/router_app.dart';
 import 'package:smart_shope/core/utils/title_text.dart';
-import 'package:smart_shope/features/home/peresntatio/view/widgets/box_image_home.dart';
+import 'package:smart_shope/features/home/peresntation/view/widgets/box_image_home.dart';
 
 import '../../../../../core/utils/color_app.dart';
 import '../../viewModel/featured/featured.dart';
@@ -50,12 +52,17 @@ class FeaturedProduct extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.only(right: 15.r),
-                  child: BoxImageAndOther(
-                    image: FeaturedListName.featured[index].image,
-                    title: FeaturedListName.featured[index].title,
-                    ratting: FeaturedListName.featured[index].ratting,
-                    price: FeaturedListName.featured[index].price,
-                    reviews: FeaturedListName.featured[index].reviews,
+                  child: GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouter.kDetailsView);
+                    },
+                    child: BoxImageAndOther(
+                      image: FeaturedListName.featured[index].image,
+                      title: FeaturedListName.featured[index].title,
+                      ratting: FeaturedListName.featured[index].ratting,
+                      price: FeaturedListName.featured[index].price,
+                      reviews: FeaturedListName.featured[index].reviews,
+                    ),
                   ),
                 );
               },

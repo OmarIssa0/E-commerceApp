@@ -19,6 +19,9 @@ class SearchBarHomeView extends StatelessWidget {
           borderRadius: BorderRadius.circular(10.r),
         ),
         child: const TextField(
+          // onTap: () {
+          //   GoRouter.of(context).push(AppRouter.kDetailsView);
+          // },
           cursorColor: ColorApp.kColorDarkGrey,
           decoration: InputDecoration(
             suffixIcon:

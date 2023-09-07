@@ -1,4 +1,4 @@
-import 'package:smart_shope/features/home/peresntatio/viewModel/featured/featured_model.dart';
+import 'package:smart_shope/features/home/peresntation/viewModel/featured/featured_model.dart';
 
 class FeaturedListName {
   static List<FeaturedProductModel> featured = [

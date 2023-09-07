@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_shope/features/home/peresntatio/view/widgets/bar_home_view.dart';
-import 'package:smart_shope/features/home/peresntatio/view/widgets/categories_list.dart';
-import 'package:smart_shope/features/home/peresntatio/view/widgets/featured_product.dart';
-import 'package:smart_shope/features/home/peresntatio/view/widgets/search_bar_home_view.dart';
+import 'package:smart_shope/features/home/peresntation/view/widgets/bar_home_view.dart';
+import 'package:smart_shope/features/home/peresntation/view/widgets/categories_list.dart';
+import 'package:smart_shope/features/home/peresntation/view/widgets/featured_product.dart';
+import 'package:smart_shope/features/home/peresntation/view/widgets/search_bar_home_view.dart';
 
 import '../../../../../core/utils/image_asset.dart';
 
